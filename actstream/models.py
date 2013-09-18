@@ -96,6 +96,8 @@ class Action(models.Model):
 
     public = models.BooleanField(default=True)
 
+    domain_id = models.PositiveIntegerField(blank=True, null=True)
+
     objects = actstream_settings.get_action_manager()
 
     class Meta:

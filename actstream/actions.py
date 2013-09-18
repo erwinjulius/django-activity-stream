@@ -102,7 +102,8 @@ def action_handler(verb, **kwargs):
         verb=unicode(verb),
         public=bool(kwargs.pop('public', True)),
         description=kwargs.pop('description', None),
-        timestamp=kwargs.pop('timestamp', now())
+        timestamp=kwargs.pop('timestamp', now()),
+        domain_id=kwargs.pop('domain_id', 0),
     )
 
     for opt in ('target', 'action_object'):
